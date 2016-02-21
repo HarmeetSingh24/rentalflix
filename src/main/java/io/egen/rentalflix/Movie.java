@@ -1,6 +1,4 @@
-package main.java.io.egen.rentalflix;
-
-
+package io.egen.rentalflix;
 
 /**
  * Entity representing a movie.
@@ -8,33 +6,39 @@ package main.java.io.egen.rentalflix;
  */
 public class Movie {
 	//POJO IMPLEMENTATION GOES HERE
-	private  int id;
-	public int getId() {
+	static int id;
+	static String title;
+	static int year;
+	static String language;
+	Movie(int id,String title,int year,String language){
+		Movie.id =id;
+		Movie.title=title;
+		Movie.year=year;
+		Movie.language=language;
+	}
+	public static int getId() {
 		return id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public static void setId(int id) {
+		Movie.id = id;
 	}
-	public String getTitle() {
+	public static String getTitle() {
 		return title;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+	public static void setTitle(String title) {
+		Movie.title = title;
 	}
-	public String getYear() {
+	public static int getYear() {
 		return year;
 	}
-	public void setYear(String year) {
-		this.year = year;
+	public static void setYear(int year) {
+		Movie.year = year;
 	}
-	public String getLanguage() {
+	public static String getLanguage() {
 		return language;
 	}
-	public void setLanguage(String language) {
-		this.language = language;
+	public static void setLanguage(String language) {
+		Movie.language = language;
 	}
-	private String title;
-	private String year;
-	private String language;
 }
 
